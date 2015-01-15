@@ -4,6 +4,7 @@ use std::io::TempDir;
 use std::io::fs::File;
 use std::io::process::Command;
 
+/// Type of shader.
 #[derive(Show, Clone, PartialEq, Eq)]
 pub enum ShaderType {
     Vertex,
