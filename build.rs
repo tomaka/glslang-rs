@@ -15,4 +15,6 @@ fn main() {
     if let Err(_) = std::io::fs::link(&path, &out_file) {
         std::io::fs::copy(&path, &out_file).unwrap();
     }
+
+    std::io::fs::chmod(&out_file, std::io::USER_EXEC).unwrap();
 }
